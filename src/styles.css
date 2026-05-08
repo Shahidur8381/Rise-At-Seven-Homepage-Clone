@@ -45,6 +45,8 @@
   --color-border: var(--border);
   --color-input: var(--input);
   --color-ring: var(--ring);
+  --color-mint: var(--mint);
+  --color-ink: var(--ink);
   --color-ring-offset-background: var(--background);
   --color-chart-1: var(--chart-1);
   --color-chart-2: var(--chart-2);
@@ -65,6 +67,8 @@
   --radius: 0.625rem;
   --background: oklch(1 0 0);
   --foreground: oklch(0.129 0.042 264.695);
+  --mint: oklch(0.92 0.08 165);
+  --ink: oklch(0.15 0.01 270);
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.129 0.042 264.695);
   --popover: oklch(1 0 0);
