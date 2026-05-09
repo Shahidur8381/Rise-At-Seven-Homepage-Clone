@@ -348,7 +348,7 @@ export default function Navbar({ isVisible, isAtTop }: NavbarProps) {
       }`}
     >
       {/* Rounded card container */}
-      <div className="w-full h-full bg-gray-900/90 backdrop-blur-xl rounded-3xl flex flex-col items-start justify-between px-4 py-2.5 overflow-hidden">
+      <div className="w-full h-full bg-gray-900/95 backdrop-blur-lg rounded-3xl flex flex-col items-start justify-between px-4 py-2.5 overflow-hidden transform translate-z-0">
         <div className="w-full grid gap-y-10">
 
         {/* Header: logo + close */}
@@ -428,10 +428,11 @@ export default function Navbar({ isVisible, isAtTop }: NavbarProps) {
                   {/* Expandable sub-items */}
                   {item.hasMega && (
                     <div
-                      className={`overflow-hidden transition-[max-height,opacity] duration-300 ease-in-out ${
-                        isExpanded ? 'max-h-96 opacity-100 pb-3' : 'max-h-0 opacity-0'
+                      className={`grid overflow-hidden transition-all duration-300 ease-in-out ${
+                        isExpanded ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'
                       }`}
                     >
+                      <div className="min-h-0">
                       <div className="grid gap-y-1 py-4">
                         {allLinks.map((link) => (
                           <a
@@ -443,6 +444,8 @@ export default function Navbar({ isVisible, isAtTop }: NavbarProps) {
                             {link}
                           </a>
                         ))}
+                      </div>
+                        </div>
                       </div>
                     </div>
                   )}
