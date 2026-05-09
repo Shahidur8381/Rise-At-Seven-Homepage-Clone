@@ -445,7 +445,6 @@ export default function Navbar({ isVisible, isAtTop }: NavbarProps) {
                           </a>
                         ))}
                       </div>
-                        </div>
                       </div>
                     </div>
                   )}
