@@ -1,4 +1,6 @@
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import SmoothScroll from "../components/SmoothScroll";
+import EntryAnimation from "../components/EntryAnimation";
 import {
   Outlet,
   Link,
@@ -72,19 +74,28 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "Rise at Seven | Award Winning Search-First Content Marketing Agency (clone homepage only)" },
+      { name: "description", content: "Clone of Rise at Seven homepage" },
+      { name: "author", content: "Rise at Seven" },
+      { property: "og:title", content: "Rise at Seven | Award Winning Search-First Content Marketing Agency" },
+      { property: "og:description", content: "Clone of Rise at Seven homepage" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
-      { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:site", content: "@riseatseven" },
     ],
     links: [
       {
         rel: "stylesheet",
         href: appCss,
+      },
+      {
+        rel: "stylesheet",
+        href: "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css",
+      },
+      {
+        rel: "icon",
+        type: "image/png",
+        href: "https://riseatseven.com/dist/favicons/coast-228x228.png",
       },
     ],
   }),
@@ -100,7 +111,7 @@ function RootShell({ children }: { children: React.ReactNode }) {
       <head>
         <HeadContent />
       </head>
-      <body>
+      <body className="bg-[#efeeec]">
         {children}
         <Scripts />
       </body>
@@ -113,7 +124,10 @@ function RootComponent() {
 
   return (
     <QueryClientProvider client={queryClient}>
-      <Outlet />
+      <EntryAnimation />
+      <SmoothScroll>
+        <Outlet />
+      </SmoothScroll>
     </QueryClientProvider>
   );
 }

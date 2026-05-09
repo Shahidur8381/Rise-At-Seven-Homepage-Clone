@@ -1,13 +1,12 @@
 import { createFileRoute } from "@tanstack/react-router";
 import Hero from "@/components/Hero";
-import Marquee from "@/components/Marquee";
-import Stats from "@/components/Stats";
+import ClientLogos from "@/components/ClientLogos";
+import AgencySection from "@/components/AgencySection";
+import FeaturedWork from "@/components/FeaturedWork";
 import Services from "@/components/Services";
-import Work from "@/components/Work";
-import Clients from "@/components/Clients";
-import Testimonials from "@/components/Testimonials";
-import Awards from "@/components/Awards";
-import Blog from "@/components/Blog";
+import Marquee from "@/components/Marquee";
+import Legacy from "@/components/Legacy";
+import WhatsNew from "@/components/WhatsNew";
 import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
 
@@ -17,16 +16,15 @@ export const Route = createFileRoute("/")({
 
 function Index() {
   return (
-    <main className="min-h-screen bg-ink">
+    <main className="min-h-screen bg-[#efeeec]">
       <Hero />
-      <Marquee items={["Digital PR", "SEO", "Content", "Social", "Influencer", "AI Search", "YouTube", "TikTok"]} />
-      <Stats />
+      <ClientLogos />
+      <AgencySection />
+      <FeaturedWork />
       <Services />
-      <Work />
-      <Clients />
-      <Testimonials />
-      <Awards />
-      <Blog />
+      <Marquee />
+      <Legacy />
+      <WhatsNew />
       <CTA />
       <Footer />
     </main>
