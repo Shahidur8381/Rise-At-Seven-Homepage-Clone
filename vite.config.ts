@@ -7,7 +7,10 @@ import path from "path";
 
 export default defineConfig({
   plugins: [
-    tanstackStart({ server: { entry: "server" } }),
+    tanstackStart({ 
+      server: { entry: "server" },
+      prerender: { enabled: true }
+    }),
     viteReact(),
     tailwindcss(),
     tsConfigPaths({ projects: ["./tsconfig.json"] }),
