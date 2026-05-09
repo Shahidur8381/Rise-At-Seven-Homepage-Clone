@@ -2,6 +2,8 @@
 
 A pixel-perfect, high-fidelity frontend clone of the award-winning search-first content marketing agency, [Rise at Seven](https://riseatseven.com/).
 
+**🚀 Live Demo:** [https://rise-at-seven-clone.netlify.app/](https://rise-at-seven-clone.netlify.app/)
+
 This project was built to replicate the stunning typography, intricate GSAP scroll animations, and premium responsive layouts found on the original site, without relying on automated site builders.
 
 ## Features
